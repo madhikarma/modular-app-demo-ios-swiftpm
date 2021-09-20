@@ -40,10 +40,10 @@
 # defaults write com.apple.Xcode PBXNumberOfParallelBuildSubtasks 16
 # echo $(date)
 
-echo "Checking out SwiftPM dependencies into custom location..."
-echo $(date)
+# echo "Checking out SwiftPM dependencies into custom location..."
+# echo $(date)
 # Note. does NOT use ~/Library/Caches/org.swift.swiftpm cache due to -clonedSourcePackagesDirPath
-xcodebuild -workspace ./ModularDemoApp.xcworkspace -scheme ModularDemoApp -clonedSourcePackagesDirPath SourcePackages -scmProvider xcode -resolvePackageDependencies
+# xcodebuild -workspace ./ModularDemoApp.xcworkspace -scheme ModularDemoApp -clonedSourcePackagesDirPath SourcePackages -scmProvider xcode -resolvePackageDependencies
 
 
 echo "Building Xcode project..."
