@@ -36,15 +36,24 @@
 # rm -rf SharedA/builds
 
 # Setup Xcode build threads
-# echo "Setup Xcode build threads..."
-# defaults write com.apple.Xcode PBXNumberOfParallelBuildSubtasks 16
-# echo $(date)
+echo "Setup Xcode build threads..."
+echo "CPU cores available: `sysctl -n hw.ncpu`"
+defaults write com.apple.Xcode PBXNumberOfParallelBuildSubtasks `sysctl -n hw.ncpu`
+defaults write com.apple.Xcode IDEBuildOperationMaxNumberOfConcurrentCompileTasks `sysctl -n hw.ncpu`
+defaults read com.apple.Xcode PBXNumberOfParallelBuildSubtasks
+defaults read com.apple.Xcode IDEBuildOperationMaxNumberOfConcurrentCompileTasks
+echo $(date)
 
-# echo "Checking out SwiftPM dependencies into custom location..."
-# echo $(date)
-# Note. does NOT use ~/Library/Caches/org.swift.swiftpm cache due to -clonedSourcePackagesDirPath
-# xcodebuild -workspace ./ModularDemoApp.xcworkspace -scheme ModularDemoApp -clonedSourcePackagesDirPath SourcePackages -scmProvider xcode -resolvePackageDependencies
-
+if [ -d "/SourcePackages" ] 
+then
+    echo "Directory /SourcePackages exists e.g. from cache" 
+else
+    echo "Error: Directory /SourcePackages does not exists."
+    echo "Checking out SwiftPM dependencies into custom location..."
+    echo $(date)
+    # Note. does NOT use ~/Library/Caches/org.swift.swiftpm cache due to -clonedSourcePackagesDirPath
+    xcodebuild -workspace ./ModularDemoApp.xcworkspace -scheme ModularDemoApp -clonedSourcePackagesDirPath SourcePackages -scmProvider xcode -resolvePackageDependencies
+fi
 
 echo "Building Xcode project..."
 echo $(date)
