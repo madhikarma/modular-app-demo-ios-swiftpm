@@ -44,7 +44,7 @@
 # defaults read com.apple.Xcode IDEBuildOperationMaxNumberOfConcurrentCompileTasks
 # echo $(date)
 
-if [ [-d "/SourcePackages"] ] 
+if [[ -d "./SourcePackages" ]]
 then
     echo "Directory /SourcePackages exists e.g. from cache" 
 else
