@@ -36,13 +36,13 @@
 # rm -rf SharedA/builds
 
 # Setup Xcode build threads
-echo "Setup Xcode build threads..."
-echo "CPU cores available: `sysctl -n hw.ncpu`"
-defaults write com.apple.Xcode PBXNumberOfParallelBuildSubtasks `sysctl -n hw.ncpu`
-defaults write com.apple.Xcode IDEBuildOperationMaxNumberOfConcurrentCompileTasks `sysctl -n hw.ncpu`
-defaults read com.apple.Xcode PBXNumberOfParallelBuildSubtasks
-defaults read com.apple.Xcode IDEBuildOperationMaxNumberOfConcurrentCompileTasks
-echo $(date)
+# echo "Setup Xcode build threads..."
+# echo "CPU cores available: `sysctl -n hw.ncpu`"
+# defaults write com.apple.Xcode PBXNumberOfParallelBuildSubtasks `sysctl -n hw.ncpu`
+# defaults write com.apple.Xcode IDEBuildOperationMaxNumberOfConcurrentCompileTasks `sysctl -n hw.ncpu`
+# defaults read com.apple.Xcode PBXNumberOfParallelBuildSubtasks
+# defaults read com.apple.Xcode IDEBuildOperationMaxNumberOfConcurrentCompileTasks
+# echo $(date)
 
 if [ [-d "/SourcePackages"] ] 
 then
