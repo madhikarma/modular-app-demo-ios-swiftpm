@@ -65,10 +65,10 @@ fi
 #xcodebuild -workspace ./ModularDemoApp.xcworkspace -scheme ModularDemoApp -clonedSourcePackagesDirPath SourcePackages -configuration "Debug" -sdk "iphonesimulator" -destination "generic/platform=iOS Simulator" clean build | xcpretty
 #echo $(date)
 
-echo "Building Xcode project for testing..."
-echo $(date)
-xcodebuild -workspace ./ModularDemoApp.xcworkspace -scheme ModularDemoApp -clonedSourcePackagesDirPath SourcePackages -configuration "Debug" -sdk "iphonesimulator" -destination "platform=iOS Simulator,name=iPhone 8,OS=14.5" clean build-for-testing | xcpretty
-echo $(date)
+# echo "Building Xcode project for testing..."
+# echo $(date)
+# xcodebuild -workspace ./ModularDemoApp.xcworkspace -scheme ModularDemoApp -clonedSourcePackagesDirPath SourcePackages -configuration "Debug" -sdk "iphonesimulator" -destination "platform=iOS Simulator,name=iPhone 8,OS=14.5" clean build-for-testing | xcpretty
+# echo $(date)
 
 # echo "Running tests.."
 # echo $(date)
