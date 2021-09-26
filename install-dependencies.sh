@@ -52,6 +52,9 @@ set -x
 if [[ -d "./SourcePackages" ]]
 then
     echo "Directory /SourcePackages exists e.g. from cache" 
+    ls SourcePackages/checkouts
+    ls SourcePackages/repositories
+    ls SourcePackages/artifacts
 else
     echo "Error: Directory /SourcePackages does not exists."
     echo "Checking out SwiftPM dependencies into custom location..."
