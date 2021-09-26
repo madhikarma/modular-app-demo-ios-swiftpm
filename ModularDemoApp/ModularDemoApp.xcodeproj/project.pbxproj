@@ -20,6 +20,7 @@
 		23926FA026F5B5B000FB6EE5 /* SharedA in Frameworks */ = {isa = PBXBuildFile; productRef = 23926F9F26F5B5B000FB6EE5 /* SharedA */; };
 		ED545B0A26F9BA0B0054D48F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = ED545B0926F9BA0B0054D48F /* FirebaseAnalytics */; };
 		ED545B0C26F9BA0B0054D48F /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = ED545B0B26F9BA0B0054D48F /* FirebaseCrashlytics */; };
+		ED8A09142700725F004F72FA /* Branch in Frameworks */ = {isa = PBXBuildFile; productRef = ED8A09132700725F004F72FA /* Branch */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED8A09142700725F004F72FA /* Branch in Frameworks */,
 				23926F9E26F5B5B000FB6EE5 /* FeatureA in Frameworks */,
 				23926FA026F5B5B000FB6EE5 /* SharedA in Frameworks */,
 				ED545B0C26F9BA0B0054D48F /* FirebaseCrashlytics in Frameworks */,
@@ -168,6 +170,7 @@
 				230EA51026F70B740025D1B2 /* FeatureLogin */,
 				ED545B0926F9BA0B0054D48F /* FirebaseAnalytics */,
 				ED545B0B26F9BA0B0054D48F /* FirebaseCrashlytics */,
+				ED8A09132700725F004F72FA /* Branch */,
 			);
 			productName = ModularDemoApp;
 			productReference = 23926F6526F5B1C600FB6EE5 /* ModularDemoApp.app */;
@@ -242,6 +245,7 @@
 			mainGroup = 23926F5C26F5B1C600FB6EE5;
 			packageReferences = (
 				ED545B0826F9BA0B0054D48F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				ED8A09122700725F004F72FA /* XCRemoteSwiftPackageReference "ios-branch-deep-linking-attribution" */,
 			);
 			productRefGroup = 23926F6626F5B1C600FB6EE5 /* Products */;
 			projectDirPath = "";
@@ -631,6 +635,14 @@
 				version = 8.7.0;
 			};
 		};
+		ED8A09122700725F004F72FA /* XCRemoteSwiftPackageReference "ios-branch-deep-linking-attribution" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/BranchMetrics/ios-branch-deep-linking-attribution";
+			requirement = {
+				kind = exactVersion;
+				version = 1.39.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -655,6 +667,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = ED545B0826F9BA0B0054D48F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCrashlytics;
+		};
+		ED8A09132700725F004F72FA /* Branch */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED8A09122700725F004F72FA /* XCRemoteSwiftPackageReference "ios-branch-deep-linking-attribution" */;
+			productName = Branch;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
