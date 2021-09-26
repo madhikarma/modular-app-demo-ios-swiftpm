@@ -21,6 +21,8 @@
 		ED545B0A26F9BA0B0054D48F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = ED545B0926F9BA0B0054D48F /* FirebaseAnalytics */; };
 		ED545B0C26F9BA0B0054D48F /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = ED545B0B26F9BA0B0054D48F /* FirebaseCrashlytics */; };
 		ED8A09142700725F004F72FA /* Branch in Frameworks */ = {isa = PBXBuildFile; productRef = ED8A09132700725F004F72FA /* Branch */; };
+		ED8A09172700AFE1004F72FA /* OHHTTPStubs in Frameworks */ = {isa = PBXBuildFile; productRef = ED8A09162700AFE1004F72FA /* OHHTTPStubs */; };
+		ED8A09192700AFE1004F72FA /* OHHTTPStubsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ED8A09182700AFE1004F72FA /* OHHTTPStubsSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED8A09172700AFE1004F72FA /* OHHTTPStubs in Frameworks */,
+				ED8A09192700AFE1004F72FA /* OHHTTPStubsSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +194,10 @@
 				23926F7D26F5B1C700FB6EE5 /* PBXTargetDependency */,
 			);
 			name = ModularDemoAppTests;
+			packageProductDependencies = (
+				ED8A09162700AFE1004F72FA /* OHHTTPStubs */,
+				ED8A09182700AFE1004F72FA /* OHHTTPStubsSwift */,
+			);
 			productName = ModularDemoAppTests;
 			productReference = 23926F7B26F5B1C700FB6EE5 /* ModularDemoAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -246,6 +254,7 @@
 			packageReferences = (
 				ED545B0826F9BA0B0054D48F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				ED8A09122700725F004F72FA /* XCRemoteSwiftPackageReference "ios-branch-deep-linking-attribution" */,
+				ED8A09152700AFE1004F72FA /* XCRemoteSwiftPackageReference "OHHTTPStubs" */,
 			);
 			productRefGroup = 23926F6626F5B1C600FB6EE5 /* Products */;
 			projectDirPath = "";
@@ -643,6 +652,14 @@
 				version = 1.39.4;
 			};
 		};
+		ED8A09152700AFE1004F72FA /* XCRemoteSwiftPackageReference "OHHTTPStubs" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AliSoftware/OHHTTPStubs";
+			requirement = {
+				kind = exactVersion;
+				version = 9.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -672,6 +689,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = ED8A09122700725F004F72FA /* XCRemoteSwiftPackageReference "ios-branch-deep-linking-attribution" */;
 			productName = Branch;
+		};
+		ED8A09162700AFE1004F72FA /* OHHTTPStubs */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED8A09152700AFE1004F72FA /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
+			productName = OHHTTPStubs;
+		};
+		ED8A09182700AFE1004F72FA /* OHHTTPStubsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED8A09152700AFE1004F72FA /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
+			productName = OHHTTPStubsSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
