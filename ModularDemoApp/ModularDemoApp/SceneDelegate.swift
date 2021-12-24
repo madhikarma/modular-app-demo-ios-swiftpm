@@ -7,8 +7,8 @@
 
 import FeatureA
 import Home
-import Search
 import Login
+import Search
 import UIKit
 import Wishlist
 
@@ -28,19 +28,19 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         homeViewController.tabBarItem = homeTabBarItem
         let homeNavigationController = UINavigationController(rootViewController: homeViewController)
         homeNavigationController.navigationBar.backgroundColor = .white
-        
+
         let searchViewController = SearchViewController()
         let searchTabBarItem = UITabBarItem(title: "Search", image: UIImage(systemName: "magnifyingglass"), selectedImage: nil)
         searchViewController.tabBarItem = searchTabBarItem
         let searchNavigationController = UINavigationController(rootViewController: searchViewController)
         searchNavigationController.navigationBar.backgroundColor = .white
-        
+
         let wishlistViewController = WishlistViewController()
         let wishlistTabBarItem = UITabBarItem(title: "Wishlist", image: UIImage(systemName: "star"), selectedImage: nil)
         wishlistViewController.tabBarItem = wishlistTabBarItem
         let wishlistNavigationController = UINavigationController(rootViewController: wishlistViewController)
         wishlistNavigationController.navigationBar.backgroundColor = .white
-        
+
         let tabBarController = UITabBarController()
         tabBarController.tabBar.backgroundColor = .white
         tabBarController.tabBar.isTranslucent = false

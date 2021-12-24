@@ -16,7 +16,7 @@ public final class WishlistViewController: UIViewController {
         super.viewDidLoad()
         print(#function)
         view.backgroundColor = .green
-        self.title = "Wishlist"
-        self.tabBarItem.title = "Wishlist"
+        title = "Wishlist"
+        tabBarItem.title = "Wishlist"
     }
 }
