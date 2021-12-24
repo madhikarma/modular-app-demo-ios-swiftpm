@@ -13,22 +13,25 @@ public final class StarWarsAPIClient {
 
     public init() {}
 
-    public func getMovies(completion: (Result<MovieResponse, Error>) -> Void) {
+    public func getMovies(completion: @escaping (Result<MovieResponse, Error>) -> Void) {
         network.sendRequest(urlString: "https://swapi.dev/api/films") { data, response, error in
             print(Date())
-            print(response)
+            print(String(describing: response))
 
-            let result: Result<MovieResponse, Error>
+            var result: Result<MovieResponse, Error>
             if let networkError = error {
                 result = .failure(networkError)
             } else if let jsonData = data {
                 do {
-                    let movieResponse = try? JSONDecoder().decode(MovieResponse.self, from: jsonData)
+                    let movieResponse = try JSONDecoder().decode(MovieResponse.self, from: jsonData)
                     print(movieResponse.results)
                     result = .success(movieResponse)
                 } catch let jsonError {
                     result = .failure(jsonError)
                 }
+            } else {
+                let error = NSError(domain: "", code: -1, userInfo: nil)
+                result = .failure(error)
             }
 
             DispatchQueue.main.async {

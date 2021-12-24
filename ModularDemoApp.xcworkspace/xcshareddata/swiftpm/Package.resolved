@@ -11,30 +11,12 @@
         }
       },
       {
-        "package": "Alamofire",
-        "repositoryURL": "https://github.com/Alamofire/Alamofire",
-        "state": {
-          "branch": null,
-          "revision": "f82c23a8a7ef8dc1a49a8bfc6a96883e79121864",
-          "version": "5.5.0"
-        }
-      },
-      {
         "package": "BoringSSL-GRPC",
         "repositoryURL": "https://github.com/firebase/boringssl-SwiftPM.git",
         "state": {
           "branch": null,
           "revision": "734a8247442fde37df4364c21f6a0085b6a36728",
           "version": "0.7.2"
-        }
-      },
-      {
-        "package": "EasyPeasy",
-        "repositoryURL": "https://github.com/nakiostudio/EasyPeasy",
-        "state": {
-          "branch": null,
-          "revision": "b0028f63d47bcb32e37d8abb9cc5d5a781742a4e",
-          "version": "1.10.0"
         }
       },
       {
@@ -92,24 +74,6 @@
         }
       },
       {
-        "package": "Branch",
-        "repositoryURL": "https://github.com/BranchMetrics/ios-branch-deep-linking-attribution",
-        "state": {
-          "branch": null,
-          "revision": "08cccfac98ca64b53a666fcf15a7313d66abb141",
-          "version": "1.39.4"
-        }
-      },
-      {
-        "package": "FBSnapshotTestCase",
-        "repositoryURL": "https://github.com/uber/ios-snapshot-test-case",
-        "state": {
-          "branch": null,
-          "revision": "6743a701c996d8aa249e1acfbcb4fa7af4365ea6",
-          "version": "7.0.0"
-        }
-      },
-      {
         "package": "leveldb",
         "repositoryURL": "https://github.com/firebase/leveldb.git",
         "state": {
@@ -143,24 +107,6 @@
           "branch": null,
           "revision": "611337c330350c9c1823ad6d671e7f936af5ee13",
           "version": "2.0.0"
-        }
-      },
-      {
-        "package": "Realm",
-        "repositoryURL": "https://github.com/realm/realm-cocoa",
-        "state": {
-          "branch": null,
-          "revision": "e83cc9f28e8bccd477b6b81cee521c02239d2773",
-          "version": "10.20.2"
-        }
-      },
-      {
-        "package": "RealmDatabase",
-        "repositoryURL": "https://github.com/realm/realm-core",
-        "state": {
-          "branch": null,
-          "revision": "c3c11a841642ac93c27bd1edd61f989fc0bfb809",
-          "version": "11.6.1"
         }
       },
       {

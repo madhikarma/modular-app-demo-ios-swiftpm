@@ -8,9 +8,6 @@
       location = "container:"
       name = "Features">
       <FileRef
-         location = "group:FeatureA">
-      </FileRef>
-      <FileRef
          location = "group:Home">
       </FileRef>
       <FileRef
@@ -31,9 +28,6 @@
       </FileRef>
       <FileRef
          location = "group:Networking">
-      </FileRef>
-      <FileRef
-         location = "group:SharedA">
       </FileRef>
    </Group>
 </Workspace>

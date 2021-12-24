@@ -16,7 +16,14 @@ let package = Package(
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
-        .package(path: "../StarWarsAPI"),
+        .package(path: "./StarWarsAPI"),
+//        .package(name: "FBSnapshotTestCase",
+//                 url: "https://github.com/uber/ios-snapshot-test-case",
+//                 from: Version(7, 0, 0)),
+//        .package(name: "EasyPeasy",
+//                 url: "https://github.com/nakiostudio/EasyPeasy",
+//                 from: Version(1, 10, 0)),
+
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -28,6 +35,7 @@ let package = Package(
         .testTarget(
             name: "HomeTests",
             dependencies: ["Home"]
+//            dependencies: ["Home", "FBSnapshotTestCase"]
         ),
     ]
 )

@@ -9,23 +9,18 @@
 /* Begin PBXBuildFile section */
 		23926F6926F5B1C600FB6EE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23926F6826F5B1C600FB6EE5 /* AppDelegate.swift */; };
 		23926F6B26F5B1C600FB6EE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23926F6A26F5B1C600FB6EE5 /* SceneDelegate.swift */; };
-		23926F6D26F5B1C600FB6EE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23926F6C26F5B1C600FB6EE5 /* ViewController.swift */; };
 		23926F7226F5B1C700FB6EE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23926F7126F5B1C700FB6EE5 /* Assets.xcassets */; };
 		23926F7526F5B1C700FB6EE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23926F7326F5B1C700FB6EE5 /* LaunchScreen.storyboard */; };
 		23926F8026F5B1C700FB6EE5 /* ModularDemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23926F7F26F5B1C700FB6EE5 /* ModularDemoAppTests.swift */; };
 		23926F8B26F5B1C800FB6EE5 /* ModularDemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23926F8A26F5B1C800FB6EE5 /* ModularDemoAppUITests.swift */; };
-		23926F9E26F5B5B000FB6EE5 /* FeatureA in Frameworks */ = {isa = PBXBuildFile; productRef = 23926F9D26F5B5B000FB6EE5 /* FeatureA */; };
-		23926FA026F5B5B000FB6EE5 /* SharedA in Frameworks */ = {isa = PBXBuildFile; productRef = 23926F9F26F5B5B000FB6EE5 /* SharedA */; };
 		ED545B0A26F9BA0B0054D48F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = ED545B0926F9BA0B0054D48F /* FirebaseAnalytics */; };
 		ED545B0C26F9BA0B0054D48F /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = ED545B0B26F9BA0B0054D48F /* FirebaseCrashlytics */; };
-		ED8A09142700725F004F72FA /* Branch in Frameworks */ = {isa = PBXBuildFile; productRef = ED8A09132700725F004F72FA /* Branch */; };
 		ED8A09172700AFE1004F72FA /* OHHTTPStubs in Frameworks */ = {isa = PBXBuildFile; productRef = ED8A09162700AFE1004F72FA /* OHHTTPStubs */; };
 		ED8A09192700AFE1004F72FA /* OHHTTPStubsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ED8A09182700AFE1004F72FA /* OHHTTPStubsSwift */; };
-		EDAF45982775A9D900B404B4 /* Home in Frameworks */ = {isa = PBXBuildFile; productRef = EDAF45972775A9D900B404B4 /* Home */; };
 		EDAF459A2775A9D900B404B4 /* Login in Frameworks */ = {isa = PBXBuildFile; productRef = EDAF45992775A9D900B404B4 /* Login */; };
 		EDAF459C2775A9D900B404B4 /* Search in Frameworks */ = {isa = PBXBuildFile; productRef = EDAF459B2775A9D900B404B4 /* Search */; };
 		EDAF459E2775A9D900B404B4 /* Wishlist in Frameworks */ = {isa = PBXBuildFile; productRef = EDAF459D2775A9D900B404B4 /* Wishlist */; };
-		EDAF45A32775DCE400B404B4 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = EDAF45A22775DCE400B404B4 /* Networking */; };
+		EDAF45A82776185700B404B4 /* Home in Frameworks */ = {isa = PBXBuildFile; productRef = EDAF45A72776185700B404B4 /* Home */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +44,6 @@
 		23926F6526F5B1C600FB6EE5 /* ModularDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModularDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23926F6826F5B1C600FB6EE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23926F6A26F5B1C600FB6EE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		23926F6C26F5B1C600FB6EE5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		23926F7126F5B1C700FB6EE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23926F7426F5B1C700FB6EE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23926F7626F5B1C700FB6EE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,8 +53,7 @@
 		23926F8626F5B1C800FB6EE5 /* ModularDemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModularDemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23926F8A26F5B1C800FB6EE5 /* ModularDemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModularDemoAppUITests.swift; sourceTree = "<group>"; };
 		23926F8C26F5B1C800FB6EE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EDAF45A02775B7DE00B404B4 /* Network */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Network; path = ../Network; sourceTree = "<group>"; };
-		EDAF45A12775B87B00B404B4 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Networking; path = ../Networking; sourceTree = "<group>"; };
+		EDAF45A62776185100B404B4 /* Home */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Home; path = ../Home; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,16 +61,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED8A09142700725F004F72FA /* Branch in Frameworks */,
-				23926F9E26F5B5B000FB6EE5 /* FeatureA in Frameworks */,
-				23926FA026F5B5B000FB6EE5 /* SharedA in Frameworks */,
 				EDAF459A2775A9D900B404B4 /* Login in Frameworks */,
 				EDAF459E2775A9D900B404B4 /* Wishlist in Frameworks */,
 				EDAF459C2775A9D900B404B4 /* Search in Frameworks */,
 				ED545B0C26F9BA0B0054D48F /* FirebaseCrashlytics in Frameworks */,
 				ED545B0A26F9BA0B0054D48F /* FirebaseAnalytics in Frameworks */,
-				EDAF45A32775DCE400B404B4 /* Networking in Frameworks */,
-				EDAF45982775A9D900B404B4 /* Home in Frameworks */,
+				EDAF45A82776185700B404B4 /* Home in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,7 +116,6 @@
 			children = (
 				23926F6826F5B1C600FB6EE5 /* AppDelegate.swift */,
 				23926F6A26F5B1C600FB6EE5 /* SceneDelegate.swift */,
-				23926F6C26F5B1C600FB6EE5 /* ViewController.swift */,
 				23926F7126F5B1C700FB6EE5 /* Assets.xcassets */,
 				23926F7326F5B1C700FB6EE5 /* LaunchScreen.storyboard */,
 				23926F7626F5B1C700FB6EE5 /* Info.plist */,
@@ -163,8 +151,7 @@
 		EDAF459F2775B7DE00B404B4 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				EDAF45A02775B7DE00B404B4 /* Network */,
-				EDAF45A12775B87B00B404B4 /* Networking */,
+				EDAF45A62776185100B404B4 /* Home */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -186,16 +173,12 @@
 			);
 			name = ModularDemoApp;
 			packageProductDependencies = (
-				23926F9D26F5B5B000FB6EE5 /* FeatureA */,
-				23926F9F26F5B5B000FB6EE5 /* SharedA */,
 				ED545B0926F9BA0B0054D48F /* FirebaseAnalytics */,
 				ED545B0B26F9BA0B0054D48F /* FirebaseCrashlytics */,
-				ED8A09132700725F004F72FA /* Branch */,
-				EDAF45972775A9D900B404B4 /* Home */,
 				EDAF45992775A9D900B404B4 /* Login */,
 				EDAF459B2775A9D900B404B4 /* Search */,
 				EDAF459D2775A9D900B404B4 /* Wishlist */,
-				EDAF45A22775DCE400B404B4 /* Networking */,
+				EDAF45A72776185700B404B4 /* Home */,
 			);
 			productName = ModularDemoApp;
 			productReference = 23926F6526F5B1C600FB6EE5 /* ModularDemoApp.app */;
@@ -274,7 +257,6 @@
 			mainGroup = 23926F5C26F5B1C600FB6EE5;
 			packageReferences = (
 				ED545B0826F9BA0B0054D48F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				ED8A09122700725F004F72FA /* XCRemoteSwiftPackageReference "ios-branch-deep-linking-attribution" */,
 				ED8A09152700AFE1004F72FA /* XCRemoteSwiftPackageReference "OHHTTPStubs" */,
 			);
 			productRefGroup = 23926F6626F5B1C600FB6EE5 /* Products */;
@@ -319,7 +301,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23926F6D26F5B1C600FB6EE5 /* ViewController.swift in Sources */,
 				23926F6926F5B1C600FB6EE5 /* AppDelegate.swift in Sources */,
 				23926F6B26F5B1C600FB6EE5 /* SceneDelegate.swift in Sources */,
 			);
@@ -782,14 +763,6 @@
 				version = 8.7.0;
 			};
 		};
-		ED8A09122700725F004F72FA /* XCRemoteSwiftPackageReference "ios-branch-deep-linking-attribution" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/BranchMetrics/ios-branch-deep-linking-attribution";
-			requirement = {
-				kind = exactVersion;
-				version = 1.39.4;
-			};
-		};
 		ED8A09152700AFE1004F72FA /* XCRemoteSwiftPackageReference "OHHTTPStubs" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AliSoftware/OHHTTPStubs";
@@ -801,14 +774,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		23926F9D26F5B5B000FB6EE5 /* FeatureA */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = FeatureA;
-		};
-		23926F9F26F5B5B000FB6EE5 /* SharedA */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = SharedA;
-		};
 		ED545B0926F9BA0B0054D48F /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = ED545B0826F9BA0B0054D48F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
@@ -819,11 +784,6 @@
 			package = ED545B0826F9BA0B0054D48F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCrashlytics;
 		};
-		ED8A09132700725F004F72FA /* Branch */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = ED8A09122700725F004F72FA /* XCRemoteSwiftPackageReference "ios-branch-deep-linking-attribution" */;
-			productName = Branch;
-		};
 		ED8A09162700AFE1004F72FA /* OHHTTPStubs */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = ED8A09152700AFE1004F72FA /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
@@ -833,10 +793,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = ED8A09152700AFE1004F72FA /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
 			productName = OHHTTPStubsSwift;
-		};
-		EDAF45972775A9D900B404B4 /* Home */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Home;
 		};
 		EDAF45992775A9D900B404B4 /* Login */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -850,9 +806,9 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = Wishlist;
 		};
-		EDAF45A22775DCE400B404B4 /* Networking */ = {
+		EDAF45A72776185700B404B4 /* Home */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Networking;
+			productName = Home;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
