@@ -8,12 +8,12 @@
 import FeatureA
 import SharedA
 import UIKit
-import FeatureLogin
+// import FeatureLogin
 
 final class ViewController: UIViewController {
     let featureAViewController = FeatureAViewController()
-    let loginViewController = LoginViewController()
-    
+//    let loginViewController = LoginViewController()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -31,13 +31,13 @@ final class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-//        featureAViewController.delegate = self
-//        present(featureAViewController, animated: true) {
-//            self.featureAViewController.updateBackgroundColor()
-//        }
-        
-        loginViewController.delegate = self
-        present(loginViewController, animated: true)
+        featureAViewController.delegate = self
+        present(featureAViewController, animated: true) {
+            self.featureAViewController.updateBackgroundColor()
+        }
+
+//        loginViewController.delegate = self
+//        present(loginViewController, animated: true)
     }
 }
 
@@ -52,10 +52,9 @@ extension ViewController: FeatureAViewControllerDelegate {
     }
 }
 
-
-extension ViewController: LoginViewControllerDelegate {
-    
-    func loginViewControllerDidComplete(_ viewController: LoginViewController) {
-        viewController.dismiss(animated: true, completion: nil)
-    }
-}
+// extension ViewController: LoginViewControllerDelegate {
+//
+//    func loginViewControllerDidComplete(_ viewController: LoginViewController) {
+//        viewController.dismiss(animated: true, completion: nil)
+//    }
+// }
