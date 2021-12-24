@@ -6,10 +6,11 @@
 //
 
 import Foundation
-import SharedA
+import Networking
 import UIKit
 
 public final class HomeViewController: UIViewController {
+    private let network = Network()
     override public func loadView() {
         view = UIView()
     }
@@ -20,16 +21,15 @@ public final class HomeViewController: UIViewController {
         title = "Home"
         tabBarItem.title = "Home"
 
-        networking.sendJSONRequest(url: URL(string: "https://swapi.dev/api/films")!) { response in
+        network.sendRequest(urlString: "https://swapi.dev/api/films") { _, response, _ in
             print(response)
-            let alertController = UIAlertController(title: "Debug", message: response.debugDescription, preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
-                self.delegate?.didConfirm()
-            }
-            alertController.addAction(okAction)
+            DispatchQueue.main.async {
+                let alertController = UIAlertController(title: "Debug", message: response.debugDescription, preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
+                }
+                alertController.addAction(okAction)
 
-            self.present(alertController, animated: true) {
-                self.delegate?.didPresent()
+                self.present(alertController, animated: true) {}
             }
         }
     }

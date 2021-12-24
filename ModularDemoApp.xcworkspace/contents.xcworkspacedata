@@ -27,6 +27,9 @@
       location = "container:"
       name = "Shared">
       <FileRef
+         location = "group:Networking">
+      </FileRef>
+      <FileRef
          location = "group:SharedA">
       </FileRef>
    </Group>
