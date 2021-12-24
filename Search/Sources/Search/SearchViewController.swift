@@ -17,5 +17,7 @@ public final class SearchViewController: UIViewController {
         super.viewDidLoad()
         print(#function)
         view.backgroundColor = .blue
+        self.title = "Search"
+        self.tabBarItem.title = "Search"
     }
 }

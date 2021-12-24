@@ -15,6 +15,8 @@ public final class HomeViewController: UIViewController {
 
     override public func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        view.backgroundColor = .brown
+        self.title = "Home"
+        self.tabBarItem.title = "Home"
     }
 }

@@ -7,7 +7,7 @@
 
 import FeatureA
 import Home
-// import Search
+import Search
 import Login
 import UIKit
 import Wishlist
@@ -24,10 +24,28 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
 
         let homeViewController = HomeViewController()
-//        let searchViewController = SearchViewController()
+        let homeTabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), selectedImage: nil)
+        homeViewController.tabBarItem = homeTabBarItem
+        let homeNavigationController = UINavigationController(rootViewController: homeViewController)
+        homeNavigationController.navigationBar.backgroundColor = .white
+        
+        let searchViewController = SearchViewController()
+        let searchTabBarItem = UITabBarItem(title: "Search", image: UIImage(systemName: "magnifyingglass"), selectedImage: nil)
+        searchViewController.tabBarItem = searchTabBarItem
+        let searchNavigationController = UINavigationController(rootViewController: searchViewController)
+        searchNavigationController.navigationBar.backgroundColor = .white
+        
         let wishlistViewController = WishlistViewController()
+        let wishlistTabBarItem = UITabBarItem(title: "Wishlist", image: UIImage(systemName: "star"), selectedImage: nil)
+        wishlistViewController.tabBarItem = wishlistTabBarItem
+        let wishlistNavigationController = UINavigationController(rootViewController: wishlistViewController)
+        wishlistNavigationController.navigationBar.backgroundColor = .white
+        
         let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [homeViewController, wishlistViewController]
+        tabBarController.tabBar.backgroundColor = .white
+        tabBarController.tabBar.isTranslucent = false
+        tabBarController.viewControllers = [homeNavigationController, searchNavigationController, wishlistNavigationController]
+
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
     }
