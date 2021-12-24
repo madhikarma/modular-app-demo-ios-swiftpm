@@ -8,10 +8,19 @@
       location = "container:"
       name = "Features">
       <FileRef
+         location = "group:FeatureA">
+      </FileRef>
+      <FileRef
+         location = "group:Home">
+      </FileRef>
+      <FileRef
          location = "group:Login">
       </FileRef>
       <FileRef
-         location = "group:FeatureA">
+         location = "group:Search">
+      </FileRef>
+      <FileRef
+         location = "group:Wishlist">
       </FileRef>
    </Group>
    <Group

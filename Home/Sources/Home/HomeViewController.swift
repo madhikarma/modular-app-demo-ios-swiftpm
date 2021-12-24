@@ -8,13 +8,13 @@
 import Foundation
 import UIKit
 
-final class HomeViewController: UIViewController {
-    override func loadView() {
+public final class HomeViewController: UIViewController {
+    override public func loadView() {
         view = UIView()
     }
 
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
+        view.backgroundColor = .red
     }
 }

@@ -5,10 +5,14 @@
 //  Created by Shagun on 18/09/2021.
 //
 
-import UIKit
 import FeatureA
+import Home
+// import Search
+import Login
+import UIKit
+import Wishlist
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo _: UISceneSession, options _: UIScene.ConnectionOptions) {
@@ -18,7 +22,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = FeatureAViewController()
+
+        let homeViewController = HomeViewController()
+//        let searchViewController = SearchViewController()
+        let wishlistViewController = WishlistViewController()
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [homeViewController, wishlistViewController]
+        window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
     }
 

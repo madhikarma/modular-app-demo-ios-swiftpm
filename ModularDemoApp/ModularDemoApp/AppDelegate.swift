@@ -5,8 +5,8 @@
 //  Created by Shagun on 18/09/2021.
 //
 
-import UIKit
 import FeatureA
+import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
