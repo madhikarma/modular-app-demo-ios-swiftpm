@@ -27,6 +27,9 @@
       location = "container:"
       name = "Shared">
       <FileRef
+         location = "group:StarWarsAPI">
+      </FileRef>
+      <FileRef
          location = "group:Networking">
       </FileRef>
       <FileRef

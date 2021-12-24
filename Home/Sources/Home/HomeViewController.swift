@@ -6,31 +6,28 @@
 //
 
 import Foundation
-import Networking
+import StarWarsAPI
 import UIKit
 
 public final class HomeViewController: UIViewController {
-    private let network = Network()
+    private let starWarsAPIClient = StarWarsAPIClient()
+
+    // MARK: - View lifecycle
+
     override public func loadView() {
         view = UIView()
     }
 
     override public func viewDidLoad() {
+        print(#function)
         super.viewDidLoad()
         view.backgroundColor = .brown
         title = "Home"
         tabBarItem.title = "Home"
 
-        network.sendRequest(urlString: "https://swapi.dev/api/films") { _, response, _ in
+        print(Date())
+        starWarsAPIClient.getMovies { response, _ in
             print(response)
-            DispatchQueue.main.async {
-                let alertController = UIAlertController(title: "Debug", message: response.debugDescription, preferredStyle: .alert)
-                let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
-                }
-                alertController.addAction(okAction)
-
-                self.present(alertController, animated: true) {}
-            }
         }
     }
 }
