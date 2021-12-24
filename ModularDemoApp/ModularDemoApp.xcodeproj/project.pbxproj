@@ -13,14 +13,14 @@
 		23926F7526F5B1C700FB6EE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23926F7326F5B1C700FB6EE5 /* LaunchScreen.storyboard */; };
 		23926F8026F5B1C700FB6EE5 /* ModularDemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23926F7F26F5B1C700FB6EE5 /* ModularDemoAppTests.swift */; };
 		23926F8B26F5B1C800FB6EE5 /* ModularDemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23926F8A26F5B1C800FB6EE5 /* ModularDemoAppUITests.swift */; };
-		ED545B0A26F9BA0B0054D48F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = ED545B0926F9BA0B0054D48F /* FirebaseAnalytics */; };
-		ED545B0C26F9BA0B0054D48F /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = ED545B0B26F9BA0B0054D48F /* FirebaseCrashlytics */; };
 		ED8A09172700AFE1004F72FA /* OHHTTPStubs in Frameworks */ = {isa = PBXBuildFile; productRef = ED8A09162700AFE1004F72FA /* OHHTTPStubs */; };
 		ED8A09192700AFE1004F72FA /* OHHTTPStubsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ED8A09182700AFE1004F72FA /* OHHTTPStubsSwift */; };
 		EDAF459A2775A9D900B404B4 /* Login in Frameworks */ = {isa = PBXBuildFile; productRef = EDAF45992775A9D900B404B4 /* Login */; };
 		EDAF459C2775A9D900B404B4 /* Search in Frameworks */ = {isa = PBXBuildFile; productRef = EDAF459B2775A9D900B404B4 /* Search */; };
 		EDAF459E2775A9D900B404B4 /* Wishlist in Frameworks */ = {isa = PBXBuildFile; productRef = EDAF459D2775A9D900B404B4 /* Wishlist */; };
 		EDAF45A82776185700B404B4 /* Home in Frameworks */ = {isa = PBXBuildFile; productRef = EDAF45A72776185700B404B4 /* Home */; };
+		EDAF45AC2776217000B404B4 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = EDAF45AB2776217000B404B4 /* Networking */; };
+		EDAF45AE2776217000B404B4 /* StarWarsAPI in Frameworks */ = {isa = PBXBuildFile; productRef = EDAF45AD2776217000B404B4 /* StarWarsAPI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,9 +63,9 @@
 			files = (
 				EDAF459A2775A9D900B404B4 /* Login in Frameworks */,
 				EDAF459E2775A9D900B404B4 /* Wishlist in Frameworks */,
+				EDAF45AE2776217000B404B4 /* StarWarsAPI in Frameworks */,
 				EDAF459C2775A9D900B404B4 /* Search in Frameworks */,
-				ED545B0C26F9BA0B0054D48F /* FirebaseCrashlytics in Frameworks */,
-				ED545B0A26F9BA0B0054D48F /* FirebaseAnalytics in Frameworks */,
+				EDAF45AC2776217000B404B4 /* Networking in Frameworks */,
 				EDAF45A82776185700B404B4 /* Home in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,12 +173,12 @@
 			);
 			name = ModularDemoApp;
 			packageProductDependencies = (
-				ED545B0926F9BA0B0054D48F /* FirebaseAnalytics */,
-				ED545B0B26F9BA0B0054D48F /* FirebaseCrashlytics */,
 				EDAF45992775A9D900B404B4 /* Login */,
 				EDAF459B2775A9D900B404B4 /* Search */,
 				EDAF459D2775A9D900B404B4 /* Wishlist */,
 				EDAF45A72776185700B404B4 /* Home */,
+				EDAF45AB2776217000B404B4 /* Networking */,
+				EDAF45AD2776217000B404B4 /* StarWarsAPI */,
 			);
 			productName = ModularDemoApp;
 			productReference = 23926F6526F5B1C600FB6EE5 /* ModularDemoApp.app */;
@@ -256,7 +256,6 @@
 			);
 			mainGroup = 23926F5C26F5B1C600FB6EE5;
 			packageReferences = (
-				ED545B0826F9BA0B0054D48F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				ED8A09152700AFE1004F72FA /* XCRemoteSwiftPackageReference "OHHTTPStubs" */,
 			);
 			productRefGroup = 23926F6626F5B1C600FB6EE5 /* Products */;
@@ -755,14 +754,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		ED545B0826F9BA0B0054D48F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = exactVersion;
-				version = 8.7.0;
-			};
-		};
 		ED8A09152700AFE1004F72FA /* XCRemoteSwiftPackageReference "OHHTTPStubs" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AliSoftware/OHHTTPStubs";
@@ -774,16 +765,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		ED545B0926F9BA0B0054D48F /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = ED545B0826F9BA0B0054D48F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		ED545B0B26F9BA0B0054D48F /* FirebaseCrashlytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = ED545B0826F9BA0B0054D48F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseCrashlytics;
-		};
 		ED8A09162700AFE1004F72FA /* OHHTTPStubs */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = ED8A09152700AFE1004F72FA /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
@@ -809,6 +790,14 @@
 		EDAF45A72776185700B404B4 /* Home */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Home;
+		};
+		EDAF45AB2776217000B404B4 /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Networking;
+		};
+		EDAF45AD2776217000B404B4 /* StarWarsAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = StarWarsAPI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -14,13 +14,13 @@ set -x
 # Clean default SPM Cache
 # Note. only used when -clonedSourcePackagesDirPath is not provided i.e. Xcode GUI
 # echo "Deleting default SwiftPM cache..."
-# rm -rf ~/Library/Caches/org.swift.swiftpm/
-# mkdir ~/Library/Caches/org.swift.swiftpm/
+rm -rf ~/Library/Caches/org.swift.swiftpm/
+mkdir ~/Library/Caches/org.swift.swiftpm/
 
 # Clean Derived Data
 # echo "Deleting Derived Data..."
 # echo $(date)
-# rm -rf ~/Library/Developer/Xcode/DerivedData/
+rm -rf ~/Library/Developer/Xcode/DerivedData/
 
 # Clean custom SwiftPM Cache
 # echo "Deleting custom SwiftPM cache..."

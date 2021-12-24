@@ -26,13 +26,13 @@ public final class HomeViewController: UIViewController {
         tabBarItem.title = "Home"
 
         print(Date())
-        starWarsAPIClient.getMovies { result in
-            switch result {
-            case let .success(response):
-                print(response)
-            case let .failure(error):
-                print(error)
-            }
-        }
+//        starWarsAPIClient.getMovies { result in
+//            switch result {
+//            case let .success(response):
+//                print(response)
+//            case let .failure(error):
+//                print(error)
+//            }
+//        }
     }
 }
