@@ -6,12 +6,10 @@
 //
 
 import Foundation
-import StarWarsAPI
+import SwiftUI
 import UIKit
 
 public final class HomeViewController: UIViewController {
-    private let starWarsAPIClient = StarWarsAPIClient()
-
     // MARK: - View lifecycle
 
     override public func loadView() {
@@ -26,13 +24,19 @@ public final class HomeViewController: UIViewController {
         tabBarItem.title = "Home"
 
         print(Date())
-        starWarsAPIClient.getMovies { result in
-            switch result {
-            case let .success(response):
-                print(response)
-            case let .failure(error):
-                print(error)
-            }
-        }
+
+        let homeView = HomeView()
+        let controller = UIHostingController(rootView: homeView)
+        addChild(controller)
+        controller.view.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(controller.view)
+        controller.didMove(toParent: self)
+
+        NSLayoutConstraint.activate([
+            controller.view.topAnchor.constraint(equalTo: view.topAnchor),
+            controller.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            controller.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            controller.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+        ])
     }
 }

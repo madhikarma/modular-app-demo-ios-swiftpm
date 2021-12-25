@@ -8,7 +8,7 @@
 import Foundation
 import Networking
 
-public class StarWarsAPIClient {
+open class StarWarsAPIClient {
     private let network = Network()
 
     public init() {}

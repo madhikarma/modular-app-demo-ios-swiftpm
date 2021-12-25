@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Movie: Codable {
+public struct Movie {
     public let title: String
     public let episodeID: Int
     public let openingCrawl, director, producer, releaseDate: String
@@ -16,6 +16,25 @@ public struct Movie: Codable {
     public let created, edited: String
     public let url: String
 
+    public init(title: String, episodeID: Int, openingCrawl: String, director: String, producer: String, releaseDate: String, characters: [String], planets: [String], starships: [String], vehicles: [String], species: [String], created: String, edited: String, url: String) {
+        self.title = title
+        self.episodeID = episodeID
+        self.openingCrawl = openingCrawl
+        self.director = director
+        self.producer = producer
+        self.releaseDate = releaseDate
+        self.characters = characters
+        self.planets = planets
+        self.starships = starships
+        self.vehicles = vehicles
+        self.species = species
+        self.created = created
+        self.edited = edited
+        self.url = url
+    }
+}
+
+extension Movie: Codable {
     enum CodingKeys: String, CodingKey {
         case title
         case episodeID = "episode_id"
@@ -31,5 +50,11 @@ public struct Movie: Codable {
         case created
         case edited
         case url
+    }
+}
+
+extension Movie: Identifiable {
+    public var id: Int {
+        return episodeID
     }
 }
