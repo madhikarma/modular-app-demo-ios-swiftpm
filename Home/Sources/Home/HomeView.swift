@@ -16,14 +16,22 @@ struct HomeView: View {
     }
 
     var body: some View {
-//        Text("Hello World")
         List(viewModel.movies) { movie in
             Text(movie.title)
         }.onAppear {
+            print("onAppear...")
             viewModel.fetchData()
         }.alert(isPresented: $viewModel.showError) {
             Alert(title: Text("Error"),
-                  message: Text("Something went wrong"), dismissButton: .default(Text("Ok")))
+                  message: Text("Something went wrong"),
+                  primaryButton: .default(Text("Retry")) {
+                      print("Retry...")
+                      viewModel.fetchData()
+                  },
+                  secondaryButton: .cancel())
+        }.refreshable {
+            print("Refresh...")
+            viewModel.fetchData()
         }
     }
 }
