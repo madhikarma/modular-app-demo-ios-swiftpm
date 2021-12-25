@@ -9,24 +9,32 @@ import Combine
 import Foundation
 import StarWarsAPI
 
-public class HomeListViewModel: ObservableObject {
-    private let starWarsAPIClient = StarWarsAPIClient()
-    @Published var movies: [Movie] = []
+class StubStarWarsAPIClient: StarWarsAPIClient {}
 
-    public init() {}
+public class HomeListViewModel: ObservableObject {
+    private let apiClient: StarWarsAPIClient!
+    @Published private(set) var movies: [Movie] = []
+    @Published private(set) var error: Error?
+    @Published var showError: Bool = false
+
+    public init(apiClient: StarWarsAPIClient = StarWarsAPIClient()) {
+        self.apiClient = apiClient
+    }
 
     public init(movies: [Movie]) {
+        apiClient = StubStarWarsAPIClient()
         self.movies = movies
     }
 
     public func fetchData() {
-        starWarsAPIClient.getMovies { result in
+        showError = false
+        apiClient.getMovies { result in
             switch result {
             case let .success(response):
-                print(response)
                 self.movies = response.results
             case let .failure(error):
-                print(error)
+                self.error = error
+                self.showError = true
             }
         }
     }

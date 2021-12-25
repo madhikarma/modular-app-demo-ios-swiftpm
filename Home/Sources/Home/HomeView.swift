@@ -9,17 +9,21 @@ import StarWarsAPI
 import SwiftUI
 
 struct HomeView: View {
-    private let viewModel: HomeListViewModel
+    @ObservedObject private var viewModel: HomeListViewModel
 
     public init(viewModel: HomeListViewModel = HomeListViewModel()) {
         self.viewModel = viewModel
     }
 
     var body: some View {
+//        Text("Hello World")
         List(viewModel.movies) { movie in
             Text(movie.title)
         }.onAppear {
             viewModel.fetchData()
+        }.alert(isPresented: $viewModel.showError) {
+            Alert(title: Text("Error"),
+                  message: Text("Something went wrong"), dismissButton: .default(Text("Ok")))
         }
     }
 }
@@ -32,8 +36,10 @@ class StubHomeViewModel: HomeListViewModel {
 
 struct HomeListView_Previews: PreviewProvider {
     static var previews: some View {
-        let movie = Movie(title: "A New Hope", episodeID: 4, openingCrawl: "", director: "", producer: "", releaseDate: "", characters: [], planets: [], starships: [], vehicles: [], species: [], created: "", edited: "", url: "")
-        let movies = [movie]
+        let movie1 = Movie(title: "A New Hope", episodeID: 4, openingCrawl: "", director: "", producer: "", releaseDate: "", characters: [], planets: [], starships: [], vehicles: [], species: [], created: "", edited: "", url: "")
+        let movie2 = Movie(title: "Phantom Menace", episodeID: 4, openingCrawl: "", director: "", producer: "", releaseDate: "", characters: [], planets: [], starships: [], vehicles: [], species: [], created: "", edited: "", url: "")
+
+        let movies = [movie1, movie2]
         let viewModel = StubHomeViewModel(movies: movies)
         HomeView(viewModel: viewModel)
     }

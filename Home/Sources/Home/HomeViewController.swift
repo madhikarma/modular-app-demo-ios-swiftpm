@@ -28,15 +28,17 @@ public final class HomeViewController: UIViewController {
         let homeView = HomeView()
         let controller = UIHostingController(rootView: homeView)
         addChild(controller)
-        controller.view.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(controller.view)
         controller.didMove(toParent: self)
 
+        view.addSubview(controller.view)
+        controller.view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             controller.view.topAnchor.constraint(equalTo: view.topAnchor),
             controller.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             controller.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             controller.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
         ])
+
+        controller.view.backgroundColor = .yellow
     }
 }
