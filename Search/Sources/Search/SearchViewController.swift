@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 import UIKit
 
 public final class SearchViewController: UIViewController {
@@ -19,5 +20,19 @@ public final class SearchViewController: UIViewController {
         view.backgroundColor = .blue
         title = "Search"
         tabBarItem.title = "Search"
+
+        let searchView = SearchView()
+        let controller = UIHostingController(rootView: searchView)
+        addChild(controller)
+        controller.didMove(toParent: self)
+
+        view.addSubview(controller.view)
+        controller.view.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            controller.view.topAnchor.constraint(equalTo: view.topAnchor),
+            controller.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            controller.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            controller.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+        ])
     }
 }

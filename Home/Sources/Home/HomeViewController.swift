@@ -23,8 +23,6 @@ public final class HomeViewController: UIViewController {
         title = "Home"
         tabBarItem.title = "Home"
 
-        print(Date())
-
         let homeView = HomeView()
         let controller = UIHostingController(rootView: homeView)
         addChild(controller)

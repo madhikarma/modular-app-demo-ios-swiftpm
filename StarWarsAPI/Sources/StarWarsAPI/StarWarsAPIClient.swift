@@ -13,8 +13,12 @@ open class StarWarsAPIClient {
 
     public init() {}
 
-    public func getMovies(completion: @escaping (Result<MovieResponse, Error>) -> Void) {
-        network.sendRequest(urlString: "https://swapi.dev/api/films") { data, _, error in
+    public func getMovies(query: String? = nil, completion: @escaping (Result<MovieResponse, Error>) -> Void) {
+        var urlString = "https://swapi.dev/api/films"
+        if let searchQuery = query {
+            urlString = urlString + "?q=\(searchQuery)"
+        }
+        network.sendRequest(urlString: urlString) { data, _, error in
             var result: Result<MovieResponse, Error>
             if let networkError = error {
                 result = .failure(networkError)

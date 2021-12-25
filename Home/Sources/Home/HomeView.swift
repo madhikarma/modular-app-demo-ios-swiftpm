@@ -9,15 +9,17 @@ import StarWarsAPI
 import SwiftUI
 
 struct HomeView: View {
+    // Reminder: convert to StateObject if passing down to child views
     @ObservedObject private var viewModel: HomeListViewModel
 
     public init(viewModel: HomeListViewModel = HomeListViewModel()) {
+        print(#function)
         self.viewModel = viewModel
     }
 
     var body: some View {
-        List(viewModel.movies) { movie in
-            Text(movie.title)
+        List(viewModel.items) { item in
+            Text(item.title)
         }.onAppear {
             print("onAppear...")
             viewModel.fetchData()
@@ -44,11 +46,10 @@ class StubHomeViewModel: HomeListViewModel {
 
 struct HomeListView_Previews: PreviewProvider {
     static var previews: some View {
-        let movie1 = Movie(title: "A New Hope", episodeID: 4, openingCrawl: "", director: "", producer: "", releaseDate: "", characters: [], planets: [], starships: [], vehicles: [], species: [], created: "", edited: "", url: "")
-        let movie2 = Movie(title: "Phantom Menace", episodeID: 4, openingCrawl: "", director: "", producer: "", releaseDate: "", characters: [], planets: [], starships: [], vehicles: [], species: [], created: "", edited: "", url: "")
-
-        let movies = [movie1, movie2]
-        let viewModel = StubHomeViewModel(movies: movies)
+        let item1 = HomeViewListItem(id: 1, title: "A new home")
+        let item2 = HomeViewListItem(id: 2, title: "A Phantom Menace")
+        let items = [item1, item2]
+        let viewModel = StubHomeViewModel(items: items)
         HomeView(viewModel: viewModel)
     }
 }
