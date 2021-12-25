@@ -5,24 +5,28 @@
 //  Created by Shagun Madhikarmi on 24/12/2021.
 //
 
+import Analytics
 import Combine
 import Foundation
 import StarWarsAPI
 
-public class HomeListViewModel: ObservableObject {
+public class HomeViewModel: ObservableObject {
+    private let analyticsTracker: AnalyticsTracking!
     private let apiClient: StarWarsAPIClient!
     @Published private(set) var items: [HomeViewListItem] = []
     @Published private(set) var error: Error?
     @Published var showError: Bool = false
 
-    public init(apiClient: StarWarsAPIClient = StarWarsAPIClient()) {
+    public init(apiClient: StarWarsAPIClient = StarWarsAPIClient(), analyticsTracker: AnalyticsTracking = AnalyticsTracker()) {
         print(#function)
         self.apiClient = apiClient
+        self.analyticsTracker = analyticsTracker
     }
 
     public init(items: [HomeViewListItem]) {
         print(#function)
         apiClient = StarWarsAPIClient()
+        analyticsTracker = AnalyticsTracker()
         self.items = items
     }
 
@@ -42,5 +46,14 @@ public class HomeListViewModel: ObservableObject {
                 self.showError = true
             }
         }
+    }
+}
+
+// MARK: - Track
+
+extension HomeViewModel {
+    func trackScreenView() {
+        let event = AnalyticsScreenViewEvent(name: .viewed, category: .home, properties: nil)
+        analyticsTracker.trackScreenViewEvent(event)
     }
 }

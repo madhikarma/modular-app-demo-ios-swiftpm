@@ -13,8 +13,6 @@
 		23926F7526F5B1C700FB6EE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23926F7326F5B1C700FB6EE5 /* LaunchScreen.storyboard */; };
 		23926F8026F5B1C700FB6EE5 /* ModularDemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23926F7F26F5B1C700FB6EE5 /* ModularDemoAppTests.swift */; };
 		23926F8B26F5B1C800FB6EE5 /* ModularDemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23926F8A26F5B1C800FB6EE5 /* ModularDemoAppUITests.swift */; };
-		ED8A09172700AFE1004F72FA /* OHHTTPStubs in Frameworks */ = {isa = PBXBuildFile; productRef = ED8A09162700AFE1004F72FA /* OHHTTPStubs */; };
-		ED8A09192700AFE1004F72FA /* OHHTTPStubsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ED8A09182700AFE1004F72FA /* OHHTTPStubsSwift */; };
 		EDAF459A2775A9D900B404B4 /* Login in Frameworks */ = {isa = PBXBuildFile; productRef = EDAF45992775A9D900B404B4 /* Login */; };
 		EDAF459C2775A9D900B404B4 /* Search in Frameworks */ = {isa = PBXBuildFile; productRef = EDAF459B2775A9D900B404B4 /* Search */; };
 		EDAF459E2775A9D900B404B4 /* Wishlist in Frameworks */ = {isa = PBXBuildFile; productRef = EDAF459D2775A9D900B404B4 /* Wishlist */; };
@@ -74,8 +72,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED8A09172700AFE1004F72FA /* OHHTTPStubs in Frameworks */,
-				ED8A09192700AFE1004F72FA /* OHHTTPStubsSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,8 +195,6 @@
 			);
 			name = ModularDemoAppTests;
 			packageProductDependencies = (
-				ED8A09162700AFE1004F72FA /* OHHTTPStubs */,
-				ED8A09182700AFE1004F72FA /* OHHTTPStubsSwift */,
 			);
 			productName = ModularDemoAppTests;
 			productReference = 23926F7B26F5B1C700FB6EE5 /* ModularDemoAppTests.xctest */;
@@ -256,7 +250,6 @@
 			);
 			mainGroup = 23926F5C26F5B1C600FB6EE5;
 			packageReferences = (
-				ED8A09152700AFE1004F72FA /* XCRemoteSwiftPackageReference "OHHTTPStubs" */,
 			);
 			productRefGroup = 23926F6626F5B1C600FB6EE5 /* Products */;
 			projectDirPath = "";
@@ -753,28 +746,7 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		ED8A09152700AFE1004F72FA /* XCRemoteSwiftPackageReference "OHHTTPStubs" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/AliSoftware/OHHTTPStubs";
-			requirement = {
-				kind = exactVersion;
-				version = 9.1.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		ED8A09162700AFE1004F72FA /* OHHTTPStubs */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = ED8A09152700AFE1004F72FA /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
-			productName = OHHTTPStubs;
-		};
-		ED8A09182700AFE1004F72FA /* OHHTTPStubsSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = ED8A09152700AFE1004F72FA /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
-			productName = OHHTTPStubsSwift;
-		};
 		EDAF45992775A9D900B404B4 /* Login */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Login;

@@ -1,5 +1,5 @@
 //
-//  SwiftUIView.swift
+//  SearchView.swift
 //
 //
 //  Created by Shagun Madhikarmi on 25/12/2021.
@@ -12,16 +12,18 @@ struct SearchView: View {
     @State private var searchText = ""
 
     var body: some View {
-        List {
-            ForEach(searchResults, id: \.self) { name in
-                NavigationLink(destination: Text(name)) {
-                    Text(name)
+        NavigationView {
+            List {
+                ForEach(searchResults, id: \.self) { name in
+                    NavigationLink(destination: Text(name)) {
+                        Text(name)
+                    }
                 }
             }
-        }
-        .searchable(text: $searchText) {
-            ForEach(searchResults, id: \.self) { result in
-                Text("Are you looking for \(result)?").searchCompletion(result)
+            .searchable(text: $searchText) {
+                ForEach(searchResults, id: \.self) { result in
+                    Text("Are you looking for \(result)?").searchCompletion(result)
+                }
             }
         }
     }

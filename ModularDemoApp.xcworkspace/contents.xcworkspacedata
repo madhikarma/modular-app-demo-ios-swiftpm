@@ -24,6 +24,9 @@
       location = "container:"
       name = "Shared">
       <FileRef
+         location = "group:Analytics">
+      </FileRef>
+      <FileRef
          location = "group:StarWarsAPI">
       </FileRef>
       <FileRef

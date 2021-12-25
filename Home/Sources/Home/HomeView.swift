@@ -10,9 +10,9 @@ import SwiftUI
 
 struct HomeView: View {
     // Reminder: convert to StateObject if passing down to child views
-    @ObservedObject private var viewModel: HomeListViewModel
+    @ObservedObject private var viewModel: HomeViewModel
 
-    public init(viewModel: HomeListViewModel = HomeListViewModel()) {
+    public init(viewModel: HomeViewModel = HomeViewModel()) {
         print(#function)
         self.viewModel = viewModel
     }
@@ -23,6 +23,7 @@ struct HomeView: View {
         }.onAppear {
             print("onAppear...")
             viewModel.fetchData()
+            viewModel.trackScreenView()
         }.alert(isPresented: $viewModel.showError) {
             Alert(title: Text("Error"),
                   message: Text("Something went wrong"),
@@ -38,7 +39,7 @@ struct HomeView: View {
     }
 }
 
-class StubHomeViewModel: HomeListViewModel {
+class StubHomeViewModel: HomeViewModel {
     override public func fetchData() {
         // do nothing
     }
