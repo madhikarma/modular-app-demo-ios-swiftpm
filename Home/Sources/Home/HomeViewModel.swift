@@ -13,7 +13,7 @@ import StarWarsAPI
 public class HomeViewModel: ObservableObject {
     private let analyticsTracker: AnalyticsTracking!
     private let apiClient: StarWarsAPIClient!
-    @Published private(set) var items: [HomeViewListItem] = []
+    @Published private(set) var movies: [Movie] = []
     @Published private(set) var error: Error?
     @Published var showError: Bool = false
 
@@ -23,11 +23,11 @@ public class HomeViewModel: ObservableObject {
         self.analyticsTracker = analyticsTracker
     }
 
-    public init(items: [HomeViewListItem]) {
+    public init(movies: [Movie]) {
         print(#function)
         apiClient = StarWarsAPIClient()
         analyticsTracker = AnalyticsTracker()
-        self.items = items
+        self.movies = movies
     }
 
     public func fetchData() {
@@ -37,10 +37,7 @@ public class HomeViewModel: ObservableObject {
             guard let self = self else { return }
             switch result {
             case let .success(response):
-                self.items = response.results.compactMap { movie in
-                    HomeViewListItem(id: movie.id, title: movie.title)
-                }
-
+                self.movies = response.results
             case let .failure(error):
                 self.error = error
                 self.showError = true

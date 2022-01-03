@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import StarWarsAPI
 import SwiftUI
 import UIKit
 
@@ -23,7 +24,7 @@ public final class HomeViewController: UIViewController {
         title = "Home"
         tabBarItem.title = "Home"
 
-        let homeView = HomeView()
+        let homeView = HomeView(viewModel: HomeViewModel())
         let controller = UIHostingController(rootView: homeView)
         addChild(controller)
         controller.didMove(toParent: self)

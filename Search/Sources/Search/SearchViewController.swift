@@ -9,7 +9,11 @@ import Foundation
 import SwiftUI
 import UIKit
 
+class SearchResultsController: UIViewController {}
+
 public final class SearchViewController: UIViewController {
+    private let searchController = UISearchController()
+
     override public func loadView() {
         view = UIView()
     }
@@ -17,6 +21,7 @@ public final class SearchViewController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         print(#function)
+
         view.backgroundColor = .blue
         title = "Search"
         tabBarItem.title = "Search"
