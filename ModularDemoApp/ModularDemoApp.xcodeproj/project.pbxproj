@@ -51,6 +51,7 @@
 		23926F8626F5B1C800FB6EE5 /* ModularDemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModularDemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23926F8A26F5B1C800FB6EE5 /* ModularDemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModularDemoAppUITests.swift; sourceTree = "<group>"; };
 		23926F8C26F5B1C800FB6EE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED3990992783410800E92033 /* Analytics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Analytics; path = ../Analytics; sourceTree = "<group>"; };
 		EDAF45A62776185100B404B4 /* Home */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Home; path = ../Home; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				EDAF45A62776185100B404B4 /* Home */,
+				ED3990992783410800E92033 /* Analytics */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
