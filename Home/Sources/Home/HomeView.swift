@@ -11,7 +11,7 @@ import SwiftUI
 struct HomeView: View {
     // Reminder: convert to StateObject if passing down to child views
     @ObservedObject private var viewModel: HomeViewModel
-    @EnvironmentObject private var favoriteMoviesStore: FavoriteMoviesStore // Note. can't use DI for EnvObject
+//    @EnvironmentObject private var favoriteMoviesStore: FavoriteMoviesStore // Note. can't use DI for EnvObject
 
     public init(viewModel: HomeViewModel = HomeViewModel()) {
         print(#function)
@@ -40,7 +40,7 @@ struct HomeView: View {
         }.refreshable {
             print("Refresh...")
             viewModel.fetchData()
-        }.environmentObject(favoriteMoviesStore)
+        }//.environmentObject(favoriteMoviesStore)
     }
 }
 
