@@ -40,9 +40,7 @@ struct HomeView: View {
         }.refreshable {
             print("Refresh...")
             viewModel.fetchData()
-        }
-//        }.environmentObject(favoriteMoviesStore)
-            
+        }.environmentObject(favoriteMoviesStore)
     }
 }
 
