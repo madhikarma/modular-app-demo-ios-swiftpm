@@ -17,7 +17,7 @@ let package = Package(
         // Dependencies declare other packages that this package depends on.
         .package(name: "Firebase",
                  url: "https://github.com/firebase/firebase-ios-sdk.git",
-                 from: Version(8, 1, 0)),
+                 from: Version(9, 0, 0)),
 
     ],
     targets: [
