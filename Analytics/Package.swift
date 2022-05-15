@@ -1,4 +1,4 @@
-// swift-tools-version:5.5
+// swift-tools-version: 5.6
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -17,7 +17,7 @@ let package = Package(
         // Dependencies declare other packages that this package depends on.
         .package(name: "Firebase",
                  url: "https://github.com/firebase/firebase-ios-sdk.git",
-                 from: Version(9, 0, 0)),
+                 from: "9.0.0"),
 
     ],
     targets: [
