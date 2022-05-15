@@ -1,4 +1,7 @@
 # Modular App Demo iOS 
+
+[![Build Status](https://app.bitrise.io/app/d4526b4210b3f2fd/status.svg?token=5waV9zGBNbLjxXTvzBSxng&branch=master)](https://app.bitrise.io/app/d4526b4210b3f2fd)
+
 Demo project for building an iOS app as a set of local modules managed via Swift Package Manager
 
 ## Environment
