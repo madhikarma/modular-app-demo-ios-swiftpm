@@ -2,8 +2,8 @@
 Demo project for building an iOS app as a set of local modules managed via Swift Package Manager
 
 ## Environment
-- macOS 12.2
-- iOS 15.0
+- macOS 12.2+
+- iOS 15.0+
 - Xcode 13.3.1
 
 ## Dependencies
